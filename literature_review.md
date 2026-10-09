@@ -1,0 +1,4 @@
+# Used Car Price Prediction.
+## Some Paper Review
+### [Used Car Price Prediction Using Machine Learning Techniques](https://www.academia.edu/98178262/Used_Car_Price_Prediction_Using_Machine_Learning_Techniques)
+This paper compares Linear Regression and Lasso Regression for predicting used car prices, using a Kaggle dataset with features like year, mileage, fuel type, and number of owners. Linear Regression fit the training data better (0.88 vs 0.84), but Lasso performed better on test data (0.87 vs 0.84). The authors conclude that such models can give accurate second-hand car price estimates. However, the paper is quite basic: it compares only two models and reports only R², so it is not very strong.
