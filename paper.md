@@ -55,3 +55,21 @@ Feature importance scores extracted from the trained Random Forest model reveale
 | **Fuel Type** | 0.06 |
 
 Vehicle age and distance driven emerge as the dominant pricing drivers, collectively accounting for 70% of the predictive weight in determining a used car's final selling price.
+
+## Discussion
+
+The empirical findings demonstrate that structured feature engineering plays a pivotal role in enhancing the predictive power of machine learning models for used car valuations. As shown in the performance comparison (Figure 1), incorporating explicit domain features—namely `Car_Age` and extracted `Brand` categories—raised the coefficient of determination ($R^2$ on log price) from approximately $0.67$ to $0.77$ across both Linear Regression and Random Forest architectures[cite: 2]. Furthermore, Mean Absolute Error (MAE) decreased significantly from roughly $165,000$ Rs to $130,000$ Rs, while Mean Absolute Percentage Error (MAPE) dropped from $35\% - 36\%$ down to $28\% - 29\%$[cite: 2]. 
+
+These improvements underscore the importance of data preprocessing and feature representation over algorithm selection alone. Although Random Forest inherently handles complex feature interactions better than parametric models, both algorithms benefited uniformly from the engineered feature space. The log-transformation of the selling price successfully mitigated positive skewness, enabling models to generate more stable and reliable price estimates without disproportionately penalizing higher-value vehicle listings.
+
+Despite these promising results, several limitations should be noted. First, the dataset used for training is bounded by regional listings and specific temporal constraints, meaning models may not generalize seamlessly to different macroeconomic conditions or international markets. Second, unmeasured qualitative factors—such as vehicle interior condition, accident history, and service records—were omitted from the feature set, creating an upper bound on predictive accuracy. Finally, potential multicollinearity among variables like mileage and age warrants ongoing monitoring in future expansions.
+
+## Conclusion
+
+This study investigated the effectiveness of machine learning techniques—specifically Linear Regression and Random Forest—combined with systematic feature engineering to predict used car selling prices. The results demonstrate that deriving a dedicated `Car_Age` feature and isolating vehicle brands substantially reduces prediction error, improving test $R^2$ values and lowering percentage errors across models. By establishing a robust data preprocessing and log-transformation pipeline, this research provides a reliable, data-driven framework that can assist buyers, sellers, and automotive dealerships in navigating market pricing dynamics with greater transparency and accuracy.
+
+## References
+
+1. **Used Car Price Prediction Using Machine Learning Techniques**. Available at: [Academia.edu](https://www.academia.edu/98178262/Used_Car_Price_Prediction_Using_Machine_Learning_Techniques).
+2. **Used Car Price Prediction using K-Nearest Neighbor Based Model**. International Journal of Innovative Research in Applied Sciences and Engineering (IJIRASE). Available at: [IJIRASE](https://ijirase.com/assets/paper/issue_1/volume_4/V4-Issue-2-629-632.pdf).
+3. **Using Linear Regression For Used Car Price Prediction**. International Journal of Computing and Engineering Science (IJCESEN), 2023. Available at: [Dergipark](https://dergipark.org.tr/en/download/article-file/2242032).
